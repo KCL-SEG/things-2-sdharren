@@ -8,5 +8,5 @@ class ThingForm(forms.ModelForm):
         model = Thing
         fields = ["name"]
     
-    description = forms.Textarea(label = "Description")
-    quantity = forms.NumberInput(label = "Quantity")    
+    description = forms.CharField(widget=forms.Textarea)
+    quantity = forms.NumberInput()
